@@ -1,4 +1,6 @@
-class CategoriesController < ApplicationController
+class Admin::CategoriesController < ApplicationController
+	
+	layout "main"
 	
 	def index
 		@count = Category.count

@@ -1,4 +1,6 @@
-class ProjectsController < ApplicationController
+class Admin::ProjectsController < ApplicationController
+
+	layout "main"
 
 	def index
 		@count = Project.count

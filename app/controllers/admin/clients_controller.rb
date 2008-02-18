@@ -1,4 +1,6 @@
-class ClientsController < ApplicationController
+class Admin::ClientsController < ApplicationController
+
+	layout "main"
 
 	def index
 		@count = Client.count

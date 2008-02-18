@@ -6,12 +6,32 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>Folio :: <%= controller.action_name %></title>
-	
+	<%= javascript_include_tag :all %>
+	<%= stylesheet_link_tag "screen" %>
 </head>
 
 <body>
-	<div id="page_head">
-		<h1>Folio.</h1>
-
+	<div id="header">
+		<h1>Folio</h1>
+		<span class="tagline">simple portfolio manager</span>
+		<ul id="nav">
+			<li><%= link_to_unless_current 'Categories', { :controller => 'admin/categories', :action => 'index' } %></li>
+			<li><%= link_to_unless_current 'Clients', { :controller => 'admin/clients', :action => 'index' } %></li>
+			<li><%= link_to_unless_current 'Projects', { :controller => 'admin/projects', :action => 'index' } %></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+		<p class="flash"><%= flash[:notice] %></p>
+		
+		<%= yield %> <!-- dynamic content gets inserted here -->
+		
+	</div>
+	
+	<div id="footer">
+		<p>Developed by Mike Green for <a href="http://www.fifthroomcreative.com">Fifth Room Creative</a></p>
+		<p id="license"><em>This is free software, released under the MIT License</em></p>
+	</div>
+	
 </body>
 </html>

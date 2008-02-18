@@ -1,0 +1,7 @@
+<h2>Categories</h2>
+<ol id="category_list">
+	<% @categories.each do |c| %>
+		<li><%= link_to c.name, { :action => 'show', :id => c } %> (<%= link_to "rename", { :action => 'edit', :id => c } %>)</li>
+	<% end %>
+</ol>
+<%= link_to "Create New Category", { :action => 'new' } %>
