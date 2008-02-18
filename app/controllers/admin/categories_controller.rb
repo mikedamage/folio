@@ -2,6 +2,8 @@ class Admin::CategoriesController < ApplicationController
 	
 	layout "main"
 	
+	# TODO: Add respond_to blocks for the index and show actions to allow the use of RSS and XML
+	
 	def index
 		@count = Category.count
 		if @count > 0
@@ -48,7 +50,7 @@ class Admin::CategoriesController < ApplicationController
 	end
 	
 	def destroy
-		# Remember to use :method => "DELETE" when linking to this action
+		# Remember to use :method => :delete when linking to this action
 		@category = Category.find(params[:id])
 		@category.destroy
 	end

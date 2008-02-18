@@ -1,0 +1,21 @@
+<h2>Projects in <%= @category.name %></h2>
+
+<table>
+	<tr>
+		<th>Project</th>
+		<th>Created</th>
+		<th>Modified</th>
+		<th colspan="2">Options</th>
+	</tr>
+<% @project.each do |p| %>
+	<tr>
+		<td><%= link_to p.name, { :controller => 'admin/projects', :action => 'show', :id => p.id } %></td>
+		<td><%= p.created_at %></td>
+		<td><%= p.updated_at %></td>
+		<td><%= link_to "Edit", { :controller => 'admin/projects', :action => 'edit', :id => p.id } %></td>
+		<td><%= link_to "Delete", { :controller => 'admin/projects', :action => 'destroy', :id => p.id }, :confirm => "Are you sure?", :method => :delete %></td>
+	</tr>
+<% end %>
+	<tr>
+		<td colspan="5" align="right"><%= link_to "New", { :controller => 'admin/projects', :action => 'new' } %></td>
+</table>
