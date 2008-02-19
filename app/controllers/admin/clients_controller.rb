@@ -1,7 +1,7 @@
 class Admin::ClientsController < ApplicationController
 
 	layout "main"
-
+	# TODO: create index view for clients controller
 	def index
 		@count = Client.count
 		if @count > 0
@@ -15,6 +15,7 @@ class Admin::ClientsController < ApplicationController
 	def show
 		@client = Client.find(params[:id])
 		@projects = Project.find(:all, :conditions => { :client_id => @client.id })
+		@project_count = Project.count(:conditions => { :client_id => @client.id })
 	end
 	
 	def new

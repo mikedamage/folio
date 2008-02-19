@@ -1,0 +1,25 @@
+<h2><%= @client.name %></h2>
+
+<div id="client_info">
+	<strong>Email:</strong> <%= mail_to @client.email, :encode => "hex" %><br />
+	<strong>Phone:</strong> <%= @client.phone %><br />
+	<% if @client.fax %>
+		<strong>Fax:</strong> <%= @client.fax %><br />
+	<% end %>
+	<strong>Address:</strong> <%= @client.address %><br />
+</div>
+
+<% if @project_count > 0 %>
+<div id="client_projects">
+	<h3><%= @client.name %>'s Projects</h3>
+	<table>
+		<% @projects.each do |p| %>
+			<tr>
+				<td><%= link_to p.name, { :controller => 'admin/projects', :action => 'show', :id => p.id } %></td>
+				<td><%= link_to "Edit", { :controller => 'admin/projects', :action => 'edit', :id => p.id } %></td>
+				<td><%= link_to "Delete", { :controller => 'admin/projects', :action => 'destroy', :id => p.id }, :confirm => "Are you sure?", :method => :delete %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+<% end %>

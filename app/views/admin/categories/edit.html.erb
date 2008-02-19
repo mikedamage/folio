@@ -1,7 +1,7 @@
-<h2>New Category</h2>
+<h2>Editing <%= @category.name %></h2>
 
 <%= error_messages_for 'category' %>
-<% form_for :category, @category, :url => { :action => 'create' } do |f| %>
+<% form_for :category, @category, :url => { :action => 'update' } do |f| %>
 	<p>
 		<label for="category[name]" class="required">Name</label><br />
 		<%= f.text_field :name %>

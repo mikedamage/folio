@@ -10,8 +10,10 @@
 <% @project.each do |p| %>
 	<tr>
 		<td><%= link_to p.name, { :controller => 'admin/projects', :action => 'show', :id => p.id } %></td>
-		<td><%= p.created_at %></td>
+		<td><%= p.created_at.to_date %></td>
+		<% unless p.created_at.to_date == p.updated_at.to_date %>
 		<td><%= p.updated_at %></td>
+		<% end %>
 		<td><%= link_to "Edit", { :controller => 'admin/projects', :action => 'edit', :id => p.id } %></td>
 		<td><%= link_to "Delete", { :controller => 'admin/projects', :action => 'destroy', :id => p.id }, :confirm => "Are you sure?", :method => :delete %></td>
 	</tr>

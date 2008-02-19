@@ -8,12 +8,14 @@
 	<title>Folio :: <%= controller.action_name %></title>
 	<%= javascript_include_tag :all %>
 	<%= stylesheet_link_tag "screen" %>
+	
+	<!-- TODO: write unobtrusive javascript actions/events in the header here, or include via a partial -->
 </head>
 
 <body>
 	<div id="header">
-		<h1>Folio</h1>
-		<span class="tagline">simple portfolio manager</span>
+		<h1>PORT<em>FOLIO</em> MANAGER</h1>
+	<!--	<span class="tagline">simple portfolio manager</span> -->
 		<ul id="nav">
 			<li><%= link_to_unless_current 'Categories', { :controller => 'admin/categories', :action => 'index' } %></li>
 			<li><%= link_to_unless_current 'Clients', { :controller => 'admin/clients', :action => 'index' } %></li>

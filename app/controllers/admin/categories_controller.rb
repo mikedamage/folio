@@ -16,7 +16,12 @@ class Admin::CategoriesController < ApplicationController
 	
 	def show
 		@category = Category.find(params[:id])
-		@projects = Project.find(:all, :conditions => { :category_id => @category.id })
+		if Project.count(:conditions => { :category_id => @category.id }) > 0
+			@projects = Project.find(:all, :conditions => { :category_id => @category.id })
+		else
+			redirect_to :action => "index"
+			flash[:notice] = "You haven't added any projects to this category yet!"
+		end
 	end
 	
 	def new
