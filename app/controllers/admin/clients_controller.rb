@@ -1,11 +1,12 @@
 class Admin::ClientsController < ApplicationController
 
 	layout "main"
-	# TODO: create index view for clients controller
+
 	def index
 		@count = Client.count
 		if @count > 0
 			@clients = Client.find(:all)
+			@projects = Project.find(:all)
 		else
 			redirect_to :action => "new"
 			flash[:notice] = "No clients found, please create one."

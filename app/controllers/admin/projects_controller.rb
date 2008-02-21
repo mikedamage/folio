@@ -19,6 +19,8 @@ class Admin::ProjectsController < ApplicationController
 	
 	def new
 		@project = Project.new
+		@categories = Category.find(:all)
+		@clients = Client.find(:all)
 	end
 	
 	def edit

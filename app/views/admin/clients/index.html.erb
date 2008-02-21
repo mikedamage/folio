@@ -11,8 +11,10 @@
 			<td><%= link_to c.name, { :action => "show", :id => c.id } %></td>
 			<td>
 				<ul>
-					<% Client.find_projects(c.id).each do |p| %>
-					<li><%= link_to p.name, { :controller => "projects", :action => "show", :id => p.id } %></li>
+					<% @projects.each do |p| %>
+						<% if p.client_id == c.id %>
+							<li><%= link_to p.name, { :controller => "projects", :action => "show", :id => p.id } %></li>
+						<% end %>
 					<% end %>
 				</ul>
 			</td>
