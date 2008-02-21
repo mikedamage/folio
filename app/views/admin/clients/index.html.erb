@@ -1,0 +1,22 @@
+<h2>Listing Clients</h2>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Projects</th>
+		<th>Options</th>
+	</tr>
+	<% @clients.each do |c| %>
+		<tr>
+			<td><%= link_to c.name, { :action => "show", :id => c.id } %></td>
+			<td>
+				<ul>
+					<% Client.find_projects(c.id).each do |p| %>
+					<li><%= link_to p.name, { :controller => "projects", :action => "show", :id => p.id } %></li>
+					<% end %>
+				</ul>
+			</td>
+			<td><%= link_to "Edit", { :action => "edit", :id => c.id } %></td>
+			<td><%= link_to "Delete", { :action => "destroy", :id => c.id }, :confirm => "Are you sure?", :method => :delete %></td>
+		</tr>
+	<% end %>
