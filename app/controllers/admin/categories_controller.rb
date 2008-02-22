@@ -1,6 +1,6 @@
 class Admin::CategoriesController < ApplicationController
 	
-	layout "main"
+	layout "admin"
 	
 	# TODO: Add respond_to blocks for the index and show actions to allow the use of RSS and XML
 	

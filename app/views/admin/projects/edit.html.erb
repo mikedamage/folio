@@ -2,10 +2,15 @@
 
 <%= error_messages_for 'project' %>
 
-<% form_for :project, @project, :url => { :action => 'update' } do |f| %>
+<% form_for :project, @project, :url => { :action => 'update', :id => @project.id } do |f| %>
 	<p>
 		<label for="project[name]">Name</label><br />
 		<%= f.text_field :name %>
+	</p>
+	
+	<p>
+		<label for="project[tags]">Tags (separate multiple tags with commas)</label><br />
+		<%= f.text_field :tags %>
 	</p>
 	
 	<p>
@@ -32,6 +37,6 @@
 		<label for="project[description]">Description</label><br />
 		<%= f.text_area :description %>
 	</p>
-	<%= submit_tag "Save" %>
+	<%= f.submit "Save" %>
 	
 <% end %>

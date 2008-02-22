@@ -5,6 +5,12 @@
 	<strong>Projects In Gallery Rotation:</strong> <%= @in_rotation %>
 </div>
 
+<div id="tag_cloud">
+	<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+		<%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
+	<% end %>
+</div>
+
 <table id="project_list">
 	<tr>
 		<th>Project</th>
@@ -27,6 +33,7 @@
 					<p>
 						<%= truncate(strip_tags(p.description), 35)%>
 					</p>
+					<em><%= p.tag_list.each {|tag| tag.name } %></em>
 				</div>
 			</td>
 			<td>

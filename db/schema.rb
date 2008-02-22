@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -36,7 +36,8 @@ ActiveRecord::Schema.define(:version => 5) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "in_rotation", :default => true
+    t.boolean  "in_rotation",     :default => true
+    t.string   "cached_tag_list"
   end
 
   create_table "taggings", :force => true do |t|

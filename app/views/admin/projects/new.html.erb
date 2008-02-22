@@ -9,6 +9,11 @@
 	</p>
 	
 	<p>
+		<label for="project[tag_list]">Tags (separate multiple tags with commas)</label><br />
+		<%= f.text_field :tag_list %>
+	</p>
+	
+	<p>
 		<label for="project[category_id]">Category</label><br />
 		<%= collection_select(:project, :category_id, @categories, :id, :name, { :prompt => true }) %>
 		<!-- TODO: Add a link & some AJAX to quick-create a new category or client. -->

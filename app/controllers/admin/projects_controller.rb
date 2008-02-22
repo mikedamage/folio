@@ -1,13 +1,14 @@
 class Admin::ProjectsController < ApplicationController
 	caches_page :new
 	
-	layout "main"
+	layout "admin"
 
 	def index
 		@count = Project.count
 		@in_rotation = Project.count(:all, :conditions => { :in_rotation => true })
 		if @count > 0
 			@projects = Project.find(:all)
+			@tags = Project.tag_counts
 		else
 			redirect_to :action => "new"
 			flash[:notice] = "No projects found, please create one."
@@ -16,7 +17,8 @@ class Admin::ProjectsController < ApplicationController
 	
 	def show
 		@project = Project.find(params[:id])
-		@tags = Project.tag_list
+		@tags = @project.tag_list
+		@description = RedCloth.new(@project.description).to_html
 	end
 	
 	def new
@@ -57,5 +59,6 @@ class Admin::ProjectsController < ApplicationController
 		# Remember to use :method => "DELETE" when linking to this action
 		@project = Project.find(params[:id])
 		@project.destroy
+		redirect_to :action => 'index'
 	end
 end

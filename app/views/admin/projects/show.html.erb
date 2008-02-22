@@ -1,0 +1,4 @@
+<h2><%= @project.name %></h2>
+<strong>Tags:</strong> <%= @project.tag_list %><br />
+<strong>Created:</strong> <%= @project.created_at.to_formatted_s(:long_ordinal)%><br />
+<strong>Modified:</strong> <% if @project.created_at != @project.updated_at %> <%= @project.updated_at.to_formatted_s(:long_ordinal) %> <% end %>

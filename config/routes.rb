@@ -34,10 +34,10 @@ ActionController::Routing::Routes.draw do |map|
 	# Admin namespace... /admin/projects, /admin/categories, /admin/clients
 	map.namespace :admin do |admin|
 		admin.resources :projects
-		admin.resources :categories
-		admin.resources :clients
+		admin.resources :categories, :has_many => [:projects]
+		admin.resources :clients, :has_many => [:projects]
 	end
 	
-	map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+	map.connect ':controller/:id/:action'
+  map.connect ':controller/:id/:action.:format'
 end

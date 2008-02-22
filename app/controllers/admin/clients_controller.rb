@@ -1,6 +1,6 @@
 class Admin::ClientsController < ApplicationController
 
-	layout "main"
+	layout "admin"
 
 	def index
 		@count = Client.count
