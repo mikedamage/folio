@@ -1,9 +1,11 @@
 class Admin::ProjectsController < ApplicationController
-
+	caches_page :new
+	
 	layout "main"
 
 	def index
 		@count = Project.count
+		@in_rotation = Project.count(:all, :conditions => { :in_rotation => true })
 		if @count > 0
 			@projects = Project.find(:all)
 		else
@@ -25,6 +27,8 @@ class Admin::ProjectsController < ApplicationController
 	
 	def edit
 		@project = Project.find(params[:id])
+		@categories = Category.find(:all)
+		@clients = Client.find(:all)
 	end
 	
 	def create

@@ -1,8 +1,8 @@
-<h2>Create A Project</h2>
+<h2>Editing <%= @project.name %></h2>
 
 <%= error_messages_for 'project' %>
 
-<% form_for :project, @project, :url => { :action => 'create' } do |f| %>
+<% form_for :project, @project, :url => { :action => 'update' } do |f| %>
 	<p>
 		<label for="project[name]">Name</label><br />
 		<%= f.text_field :name %>
@@ -32,6 +32,6 @@
 		<label for="project[description]">Description</label><br />
 		<%= f.text_area :description %>
 	</p>
-	<%= submit_tag "Create" %>
+	<%= submit_tag "Save" %>
 	
 <% end %>

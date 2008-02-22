@@ -1,0 +1,48 @@
+<h2>Listing Projects</h2>
+
+<div id="active_projects">
+	<strong>Total Projects:</strong> <%= @count %><br />
+	<strong>Projects In Gallery Rotation:</strong> <%= @in_rotation %>
+</div>
+
+<table id="project_list">
+	<tr>
+		<th>Project</th>
+		<th>Category</th>
+		<th>Client</th>
+		<th>Options</th>
+	</tr>
+	<% @projects.each do |p| %>
+		<tr>
+			<td>
+				<div class="project_data">
+					<span class="title"><%= link_to p.name, { :action => 'show', :id => p.id } %></span><br />
+					<strong>Created:</strong> <%= p.created_at.to_formatted_s(:short) %> (<%= time_ago_in_words(p.created_at) %>)<br />
+					<% unless p.created_at == p.updated_at %>
+						<strong>Updated:</strong> <%= p.updated_at.to_formatted_s(:short) %> (<%= time_ago_in_words(p.updated_at) %>)<br />
+					<% end %>
+					<%= link_to p.url, p.url %>
+				</div>
+				<div class="blurb">
+					<p>
+						<%= truncate(strip_tags(p.description), 35)%>
+					</p>
+				</div>
+			</td>
+			<td>
+				<%= link_to p.category.name, { :controller => 'admin/categories', :action => 'show', :id => p.category.id } %>
+			</td>
+			<td>
+				<%= link_to p.client.name, { :controller => 'admin/clients', :action => 'show', :id => p.client.id } %>
+			</td>
+			<td>
+				<%= link_to "Edit", { :action => 'edit', :id => p.id } %><br />
+				<%= link_to "Delete", { :action => 'destroy', :id => p.id }, :confirm => "Are you sure?", :method => :delete %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+				
+					
+				
+				
