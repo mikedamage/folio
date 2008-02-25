@@ -1,18 +1,20 @@
 <h2>Listing Projects</h2>
 
-<div id="active_projects">
-	<strong>Total Projects:</strong> <%= @count %><br />
-	<strong>Projects In Gallery Rotation:</strong> <%= @in_rotation %>
-</div>
+<!-- 
+	<div id="active_projects">
+		<strong>Total Projects:</strong> <%= @count %><br />
+		<strong>Projects In Gallery Rotation:</strong> <%= @in_rotation %>
+	</div>
+-->
 
 <div id="tag_cloud">
 	<strong>tag cloud</strong>
-	<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+	<% tag_cloud @tags, %w(sm med lg xlg) do |tag, css_class| %>
 		<%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
 	<% end %>
 </div>
 
-<table id="project_list">
+<table id="project_list" cellspacing="0">
 	<tr>
 		<th>Project</th>
 		<th>Category</th>

@@ -6,16 +6,26 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>Folio :: <%= controller.action_name %></title>
-	<%= javascript_include_tag :all %>
+	<!-- TODO: Figure out which libraries/plugins are needed for each controller action and only include necessary ones. -->
+	<%= javascript_include_tag :defaults %> 
+	<%= javascript_include_tag 'jquery', 'jquery.interface.js' %>
 	<%= stylesheet_link_tag "screen" %>
 	
-	<!-- TODO: write unobtrusive javascript actions/events in the header here, or include via a partial -->
+	<!-- Unobtrusive Javascript Partials, only pull in what you need -->
+	<% if controller.action_name == "new" || controller.action_name == "edit" %>
+		<%= javascript_include_tag 'admin/jq_forms' %> <!-- jQuery UJS script for actions that use forms -->
+	<% end %>
+	<% if controller.action_name == "show" || controller.action_name == "index" %>
+		<%= javascript_include_tag 'admin/jq_listings' %> <!-- Stuff to sexy-up listings -->
+	<% end %>
 </head>
 
 <body>
 	<div id="header">
 		<h1>PORT<em>FOLIO</em> MANAGER</h1>
-	<!--	<span class="tagline">simple portfolio manager</span> -->
+	<!--	
+	<span class="tagline">simple portfolio manager</span> 
+	-->
 		<ul id="nav">
 			<li><%= link_to_unless_current 'Categories', { :controller => 'admin/categories', :action => 'index' } %></li>
 			<li><%= link_to_unless_current 'Clients', { :controller => 'admin/clients', :action => 'index' } %></li>
@@ -26,7 +36,7 @@
 	<div id="content">
 		<p class="flash"><%= flash[:notice] %></p>
 		
-		<%= yield %> <!-- dynamic content gets inserted here -->
+		<%= yield %> <!-- controller action gets rendered here -->
 		
 	</div>
 	

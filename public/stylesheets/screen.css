@@ -4,8 +4,15 @@
   Created by Mike Green on 2008-02-18.
 ----------------------------------------------------------------*/
 
+/*
+* {
+	padding:0;
+	margin:0;
+}
+*/
+
 body {
-	font-family:Georgia, "Times New Roman", serif;
+	font-family:Verdana, Georgia, "Times New Roman", serif;
 }
 
 h1 {
@@ -19,5 +26,12 @@ h1 {
 h1 em {
 	color:#000;
 }
+
+table, td, th {
+	border:solid 1px #000;
+}
+
+
+
 
 

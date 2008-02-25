@@ -7,7 +7,7 @@
 		<th>Modified</th>
 		<th colspan="2">Options</th>
 	</tr>
-<% @project.each do |p| %>
+<% @projects.each do |p| %>
 	<tr>
 		<td><%= link_to p.name, { :controller => 'admin/projects', :action => 'show', :id => p.id } %></td>
 		<td><%= p.created_at.to_date %></td>
