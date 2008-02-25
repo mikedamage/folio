@@ -1,5 +1,4 @@
 class Admin::ProjectsController < ApplicationController
-	caches_page :new
 	
 	layout "admin"
 

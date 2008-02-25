@@ -6,6 +6,7 @@
 </div>
 
 <div id="tag_cloud">
+	<strong>tag cloud</strong>
 	<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
 		<%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
 	<% end %>
@@ -31,9 +32,9 @@
 				</div>
 				<div class="blurb">
 					<p>
-						<%= truncate(strip_tags(p.description), 35)%>
+						<%= truncate(strip_tags(RedCloth.new(p.description).to_html), 35)%>
 					</p>
-					<em><%= p.tag_list.each {|tag| tag.name } %></em>
+					<em><%= p.tag_list.each {|tag| tag } %></em>
 				</div>
 			</td>
 			<td>
