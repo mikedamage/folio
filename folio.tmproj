@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/admin/projects_controller.rb</string>
+	<string>app/views/layouts/admin.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,23 +18,9 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>194</integer>
+	<integer>271</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/admin/categories_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>14</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>app/controllers/admin/clients_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -54,14 +40,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>61</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>6</integer>
+			<integer>0</integer>
 		</dict>
 		<key>app/models/client.rb</key>
 		<dict>
@@ -168,9 +154,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>54</integer>
+				<integer>24</integer>
 				<key>line</key>
-				<integer>35</integer>
+				<integer>32</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -205,6 +191,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>app/views/layouts/admin.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>36</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>config/routes.rb</key>
 		<dict>
 			<key>caret</key>
@@ -233,14 +233,28 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>public/stylesheets/screen.css</key>
+		<key>public/javascripts/admin/jq_listings.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>public/stylesheets/screen.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>22</integer>
+				<key>line</key>
+				<integer>30</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -252,16 +266,16 @@
 	<array>
 		<string>app/views/admin/projects/show.html.erb</string>
 		<string>app/views/admin/projects/index.html.erb</string>
+		<string>app/views/layouts/admin.html.erb</string>
+		<string>public/javascripts/admin/jq_listings.js</string>
+		<string>public/stylesheets/screen.css</string>
 		<string>app/controllers/admin/projects_controller.rb</string>
-		<string>app/views/admin/projects/edit.html.erb</string>
-		<string>app/views/admin/projects/new.html.erb</string>
 		<string>config/routes.rb</string>
-		<string>app/controllers/admin/categories_controller.rb</string>
 		<string>app/controllers/admin/clients_controller.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{44, 0}, {1194, 878}}</string>
+	<string>{{385, 271}, {996, 864}}</string>
 </dict>
 </plist>
