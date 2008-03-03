@@ -1,4 +1,31 @@
 <h2><%= @project.name %></h2>
-<strong>Tags:</strong> <%= @project.tag_list %><br />
-<strong>Created:</strong> <%= @project.created_at.to_formatted_s(:long_ordinal)%><br />
-<strong>Modified:</strong> <% if @project.created_at != @project.updated_at %> <%= @project.updated_at.to_formatted_s(:long_ordinal) %> <% end %>
+
+<div id="project_stats">
+	<span class="tags"><%= @project.tag_list %></span><br /><br />
+	<span><strong>Category:</strong> <%= link_to @project.category.name, { :controller => 'categories', :action => 'show', :id => @project.category.id }%><br />
+	<span><strong>Client:</strong> <%= link_to @project.client.name, { :controller => 'clients', :action => 'show', :id => @project.client.id }%></span><br />
+	<span><strong>URL:</strong> <a href="http://<%= @project.url %>" target="_blank"><%= @project.url %></a></span><br />
+	<span><strong>Created:</strong> <%= @project.created_at.to_formatted_s(:long_ordinal)%></span><br />
+	<span><strong>Modified:</strong> 
+	<% if @project.created_at != @project.updated_at %>
+		<%= @project.updated_at.to_formatted_s(:long_ordinal) %>
+	<% else %>
+		<em>N/A</em>
+	<% end %>
+	</span><br />
+</div>
+
+<div id="project_description">
+	<h3>Description</h3>
+	<p>
+		<%= sanitize(@description) %>
+	</p>
+</div>
+
+<div id="project_images">
+	<h3>Images</h3>
+</div>
+
+<%= link_to "Edit", { :action => 'edit', :id => @project }%>
+
+

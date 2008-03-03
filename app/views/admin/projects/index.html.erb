@@ -26,11 +26,6 @@
 			<td>
 				<div class="project_data">
 					<span class="title"><%= link_to p.name, { :action => 'show', :id => p.id } %></span><br />
-					<strong>Created:</strong> <%= p.created_at.to_formatted_s(:short) %> (<%= time_ago_in_words(p.created_at) %>)<br />
-					<% unless p.created_at == p.updated_at %>
-						<strong>Updated:</strong> <%= p.updated_at.to_formatted_s(:short) %> (<%= time_ago_in_words(p.updated_at) %>)<br />
-					<% end %>
-					<%= link_to p.url, p.url %>
 				</div>
 				<div class="blurb">
 					<p>
