@@ -7,7 +7,6 @@ jQuery.noConflict(); // put jquery into compatibility mode to not interfere with
 
 jQuery(document).ready(function($){ // inside this function, $() refers to jQuery only.
 	$('input[type*=text]').click(function(){
-		$(this).Highlight(1000, '#FFF8AB');
-		return false;
+		// do something here
 	});
 });
