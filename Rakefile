@@ -8,3 +8,12 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+# Use the mighty spike of Vlad the Deployer
+
+begin
+	require 'vlad'
+	Vlad.load :scm => :git
+rescue
+	#do nothing
+end

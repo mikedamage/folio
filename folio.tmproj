@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/admin/projects/index.html.erb</string>
+	<string>Rakefile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,20 @@
 	<integer>203</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Rakefile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/controllers/admin/clients_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -161,7 +175,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>app/views/admin/projects/new.html.erb</key>
 		<dict>
@@ -205,6 +219,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>config/deploy.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>config/environment.rb</key>
 		<dict>
 			<key>caret</key>
@@ -224,30 +252,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>35</integer>
 				<key>line</key>
-				<integer>42</integer>
+				<integer>26</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>38</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
 		</dict>
 		<key>db/migrate/003_create_projects.rb</key>
 		<dict>
@@ -268,14 +280,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>43</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>4</integer>
 		</dict>
 		<key>public/javascripts/admin/jq_listings.js</key>
 		<dict>
@@ -310,6 +322,8 @@
 	<array>
 		<string>app/views/admin/projects/show.html.erb</string>
 		<string>db/schema.rb</string>
+		<string>config/deploy.rb</string>
+		<string>Rakefile</string>
 		<string>app/views/admin/projects/index.html.erb</string>
 		<string>app/views/layouts/admin.html.erb</string>
 		<string>public/stylesheets/screen.css</string>
@@ -320,6 +334,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{385, 54}, {995, 824}}</string>
+	<string>{{383, 55}, {995, 823}}</string>
 </dict>
 </plist>
