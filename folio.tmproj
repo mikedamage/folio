@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>db/migrate/007_create_assets.rb</string>
+	<string>db/migrate/005_add_rotation_field_to_projects.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,7 +18,7 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>203</integer>
+	<integer>293</integer>
 	<key>metaData</key>
 	<dict>
 		<key>Capfile</key>
@@ -233,19 +233,19 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>config/environment.rb</key>
+		<key>db/migrate/005_add_rotation_field_to_projects.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>69</integer>
+				<integer>64</integer>
 				<key>line</key>
-				<integer>49</integer>
+				<integer>2</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>14</integer>
+			<integer>0</integer>
 		</dict>
 		<key>db/migrate/007_create_assets.rb</key>
 		<dict>
@@ -281,6 +281,7 @@
 		<string>app/models/category.rb</string>
 		<string>Rakefile</string>
 		<string>db/migrate/007_create_assets.rb</string>
+		<string>db/migrate/005_add_rotation_field_to_projects.rb</string>
 		<string>app/models/client.rb</string>
 		<string>app/models/project.rb</string>
 		<string>app/models/asset.rb</string>
@@ -289,6 +290,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{158, 172}, {1022, 706}}</string>
+	<string>{{69, 116}, {1022, 706}}</string>
 </dict>
 </plist>
