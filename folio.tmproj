@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/models/asset.rb</string>
+	<string>db/migrate/007_create_assets.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,34 @@
 	<integer>203</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Capfile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>20</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Rakefile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/models/asset.rb</key>
 		<dict>
 			<key>caret</key>
@@ -219,6 +247,20 @@
 			<key>firstVisibleLine</key>
 			<integer>14</integer>
 		</dict>
+		<key>db/migrate/007_create_assets.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>db/schema.rb</key>
 		<dict>
 			<key>caret</key>
@@ -237,13 +279,16 @@
 	<key>openDocuments</key>
 	<array>
 		<string>app/models/category.rb</string>
+		<string>Rakefile</string>
+		<string>db/migrate/007_create_assets.rb</string>
 		<string>app/models/client.rb</string>
 		<string>app/models/project.rb</string>
 		<string>app/models/asset.rb</string>
+		<string>Capfile</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{80, 57}, {995, 821}}</string>
+	<string>{{158, 172}, {1022, 706}}</string>
 </dict>
 </plist>
