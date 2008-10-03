@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  category_id: 1
+  date: 2008-10-02
+  client: MyString
+  url: MyString
+  custom_values: MyString
+  description: MyText
+
+two:
+  name: MyString
+  category_id: 1
+  date: 2008-10-02
+  client: MyString
+  url: MyString
+  custom_values: MyString
+  description: MyText
