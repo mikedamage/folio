@@ -2,7 +2,9 @@
 Art/Design Portfolio Manager
 
 Author:: Mike Green <mike@fifthroomcreative.com>
+
 Copyright:: Copyright (C) 2008, Mike Green & Fifth Room Creative
+
 License:: GNU General Public License
 
 == WTF Is Folio?
