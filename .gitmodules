@@ -7,3 +7,6 @@
 [submodule "vendor/plugins/fleximage"]
 	path = vendor/plugins/fleximage
 	url = git://github.com/Squeegy/fleximage.git
+[submodule "vendor/plugins/yaml_db"]
+	path = vendor/plugins/yaml_db
+	url = git://github.com/adamwiggins/yaml_db.git
