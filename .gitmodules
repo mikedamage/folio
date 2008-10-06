@@ -4,3 +4,6 @@
 [submodule "vendor/plugins/packr"]
 	path = vendor/plugins/packr
 	url = git://github.com/jcoglan/packr.git
+[submodule "vendor/plugins/fleximage"]
+	path = vendor/plugins/fleximage
+	url = git://github.com/Squeegy/fleximage.git
