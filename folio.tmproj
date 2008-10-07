@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/images_controller.rb</string>
+	<string>app/controllers/projects_controller.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -133,20 +133,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>db/migrate/20081003034742_create_images.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>24</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>db/migrate/20081003040926_create_users.rb</key>
 		<dict>
 			<key>caret</key>
@@ -170,7 +156,6 @@
 		<string>app/controllers/projects_controller.rb</string>
 		<string>app/controllers/images_controller.rb</string>
 		<string>app/views/images/new.html.erb</string>
-		<string>db/migrate/20081003034742_create_images.rb</string>
 		<string>app/controllers/application.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
