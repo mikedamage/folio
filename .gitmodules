@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/jrails"]
 	path = vendor/plugins/jrails
 	url = git://github.com/aaronchi/jrails.git
+[submodule "vendor/plugins/rails_settings"]
+	path = vendor/plugins/rails_settings
+	url = git://github.com/Squeegy/rails-settings.git
