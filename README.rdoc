@@ -17,4 +17,4 @@ Not much. I completely scrapped the old code and began developing using the late
 Folio will eventually be a stand-alone CMS that can be easily incorporated into a static website, or into an existing CMS based website. It'll have a RESTful API so that, if desired, it can be used completely as a backend and its data can be accessed via Javascript in XML or JSON format. It will allow the user to add custom fields for different categories of work, and create custom templates for each category as well. I hope that eventually it'll be the sweetest effin' portfolio manager ever created.
 
 == How Do I Install/Configure/Use Folio?
-I'll let you know when I get that far :/
+You can find Folio's default settings file at config/initializers/settings.rb

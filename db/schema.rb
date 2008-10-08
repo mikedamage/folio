@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081003040926) do
+ActiveRecord::Schema.define(:version => 20081008050543) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(:version => 20081003040926) do
     t.string   "url"
     t.string   "custom_values"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "var",        :default => "", :null => false
+    t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
