@@ -1,3 +1,18 @@
 [submodule "vendor/plugins/restful_authentication"]
 	path = vendor/plugins/restful_authentication
 	url = git://github.com/technoweenie/restful-authentication.git
+[submodule "vendor/plugins/packr"]
+	path = vendor/plugins/packr
+	url = git://github.com/jcoglan/packr.git
+[submodule "vendor/plugins/fleximage"]
+	path = vendor/plugins/fleximage
+	url = git://github.com/Squeegy/fleximage.git
+[submodule "vendor/plugins/yaml_db"]
+	path = vendor/plugins/yaml_db
+	url = git://github.com/adamwiggins/yaml_db.git
+[submodule "vendor/plugins/jrails"]
+	path = vendor/plugins/jrails
+	url = git://github.com/aaronchi/jrails.git
+[submodule "vendor/plugins/rails_settings"]
+	path = vendor/plugins/rails_settings
+	url = git://github.com/Squeegy/rails-settings.git

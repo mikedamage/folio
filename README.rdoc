@@ -1,0 +1,20 @@
+= Folio
+Art/Design Portfolio Manager
+
+Author:: Mike Green <mike@fifthroomcreative.com>
+
+Copyright:: Copyright (C) 2008, Mike Green & Fifth Room Creative
+
+License:: GNU General Public License
+
+== WTF Is Folio?
+No, Folio is not a paralytic childhood illness. It's a Content Management System geared specifically toward artists and web developers as a platform to show off their work. My vision for Folio is that eventually it'll be the easiest, most convenient way for somebody to say "Hey! Check out all this stuff I did!" without having to hard code every single page of their portfolio. Folio has been in development on and off (mostly off) since April of 2007 when I needed a solution for managing the "Samples of Our Work" section of a web development firm's website. The result was my very first Rails app, which also happened to be the first application of any kind I'd ever developed. It was pretty terrible, but it got the job done and inspired me to begin developing Folio into something that other people might find useful.
+
+== What Does It Do Now?
+Not much. I completely scrapped the old code and began developing using the latest stable version of Rails at the time of this writing (2.1.1), incorporating what I've learned from developing a few other simple, custom web applications.
+
+== What Will It Eventually Do?
+Folio will eventually be a stand-alone CMS that can be easily incorporated into a static website, or into an existing CMS based website. It'll have a RESTful API so that, if desired, it can be used completely as a backend and its data can be accessed via Javascript in XML or JSON format. It will allow the user to add custom fields for different categories of work, and create custom templates for each category as well. I hope that eventually it'll be the sweetest effin' portfolio manager ever created.
+
+== How Do I Install/Configure/Use Folio?
+You can find Folio's default settings file at config/initializers/settings.rb
