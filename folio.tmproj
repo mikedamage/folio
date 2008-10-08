@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/layouts/main.html.erb</string>
+	<string>lib/tasks/sass.rake</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,9 +26,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -110,7 +110,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>46</integer>
 				<key>line</key>
 				<integer>9</integer>
 			</dict>
@@ -124,9 +124,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>96</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>22</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -141,6 +141,20 @@
 				<integer>17</integer>
 				<key>line</key>
 				<integer>38</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>config/initializers/settings.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>39</integer>
+				<key>line</key>
+				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -175,6 +189,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>lib/tasks/sass.rake</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>public/javascripts/application.js</key>
 		<dict>
 			<key>caret</key>
@@ -189,6 +217,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>public/stylesheets/sass/main.sass</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
@@ -197,7 +239,10 @@
 		<string>app/controllers/categories_controller.rb</string>
 		<string>public/javascripts/application.js</string>
 		<string>app/views/layouts/main.html.erb</string>
+		<string>public/stylesheets/sass/main.sass</string>
+		<string>lib/tasks/sass.rake</string>
 		<string>app/views/layouts/admin.html.erb</string>
+		<string>config/initializers/settings.rb</string>
 		<string>app/controllers/projects_controller.rb</string>
 		<string>app/controllers/images_controller.rb</string>
 		<string>app/views/images/new.html.erb</string>
