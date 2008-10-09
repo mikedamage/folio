@@ -13,4 +13,7 @@ $(document).ready(function() {
 		}
 	);
 	
+	// Let success and error notices hang around for 3 seconds before fading out
+	$("span.error, span.success").fadeTo(3000, 1).fadeOut(1000);
+	
 });
