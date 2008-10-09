@@ -4,6 +4,7 @@ class AdminController < ApplicationController
 #	before_filter :login_required
 	
   def index
+		@title = "Portfolio Manager"
   end
 
 	def project
