@@ -1,11 +1,19 @@
 !bg_color = #222
 !txt_color = #222
-!link_color = #E93232
+!link_color = #6CAA00
+
+!serif = "Georgia, Times, serif"
+!sans = "Arial, Helvetica, sans-serif"
 
 body
-  :font-family Arial, Helvetica, sans-serif
+  :font-family= !sans
   :font-size 12px
-  :background #222
+  :background= !bg_color
+  
+a
+  :color= !link_color
+a:hover
+  :text-decoration none
   
 div.container_12
   :background #fff
@@ -19,6 +27,13 @@ h1
     :font-size 58px
     :position relative
     :top 5px
+h2
+  :letter-spacing -2px
+  
+fieldset
+  :border 1px solid #222
+  legend
+    :font-family= !serif
   
 #header
   :padding-top 10px
@@ -29,18 +44,18 @@ h1
       :display block
       :float left
       :margin-left 0
-      :margin-right 10px
+      :margin-right 5px
       :padding 0
       :font-size 14px
-      :font-family Georgia
+      :font-family= !serif
       a, div.active_item
         :display block
         :color #222
         :padding 2px 15px
-        :background #9ADB6E
+        :background #E4D487
         :text-decoration none
       div.active_item
         :font-weight bold
-        :text-decoration underline
-
-  
+        :background #9adb6e
+      a:hover
+        :background #9adb6e
