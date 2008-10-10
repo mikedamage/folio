@@ -16,10 +16,10 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
 	def flash_success(message)
-		flash[:notice] = '<span class="success">' + message + '</span>'
+		flash[:notice] = '<div class="success">' + message + '</div>'
 	end
 	
 	def flash_failure(message)
-		flash[:notice] = '<span class="error">' + message + '</span>'
+		flash[:notice] = '<div class="error">' + message + '</div>'
 	end
 end

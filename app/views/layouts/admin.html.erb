@@ -18,7 +18,7 @@
 			<div class="grid_12" id="header">
 				<h1>Folio <span class="divider">//</span> <%= @title %></h1>
 				
-				<% if @user && @user.login %>
+				<% if logged_in? %>
 					<%= render :partial => 'admin/nav' %>
 				<% else %>
 					<ul id="nav"></ul>
@@ -29,7 +29,11 @@
 			<div class="clear">&nbsp;</div>
 			
 			<div class="grid_12" id="main">
-				<p class="flash"><%= flash[:notice] %></p>
+				
+				<% if flash %>
+					<%= flash[:notice] %>
+				<% end %>
+				
 				<%= yield %>
 			</div>
 			

@@ -1,6 +1,9 @@
 !bg_color = #222
 !txt_color = #222
 !link_color = #6CAA00
+!light_green = #9adb6e
+!light_red = #ec3c3c
+!dark_red = #961d1d
 
 !serif = "Georgia, Times, serif"
 !sans = "Arial, Helvetica, sans-serif"
@@ -9,6 +12,7 @@ body
   :font-family= !sans
   :font-size 12px
   :background= !bg_color
+  :color= !bg_color
   
 a
   :color= !link_color
@@ -24,17 +28,43 @@ h1
   :color #222
   span.divider
     :color #ddd
-    :font-size 58px
+    :font-size 64px
     :position relative
-    :top 5px
+    :top 10px
 h2
   :letter-spacing -2px
-  
+
+.success, .error
+  :font-family= !sans
+  :font-size 14px
+  :font-weight bold
+  :padding 10px
+  :margin-bottom 10px
+.success
+  :background= !light_green
+  :border= !link_color "2px solid"
+.error
+  :background= !light_red
+  :border= !dark_red "2px solid"
+
+/* Forms
 fieldset
   :border 1px solid #222
+  :padding 20px
   legend
-    :font-family= !serif
-  
+    :font-family= !sans
+    :font-size 24px
+    :font-weight bold
+    :letter-spacing -2px
+label
+  :font-weight bold
+input.text
+  :font-family= !sans
+  :font-weight bold
+  :font-size 16px
+  :letter-spacing -1px
+
+/* Header & Navigation 
 #header
   :padding-top 10px
   #nav
@@ -52,10 +82,13 @@ fieldset
         :display block
         :color #222
         :padding 2px 15px
-        :background #E4D487
+        :background #ccc
         :text-decoration none
       div.active_item
         :font-weight bold
-        :background #9adb6e
+        :background= !light_green
       a:hover
-        :background #9adb6e
+        :background= !light_green
+    li#session
+      :float right
+      :margin-right 0

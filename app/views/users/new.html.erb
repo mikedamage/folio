@@ -5,20 +5,20 @@
 <% form_for :user, :url => users_path do |f| -%>
 <fieldset name="user_fields">
 	<legend>Create New User</legend>
-	<p><%= label_tag 'name' %><br/>
-	<%= f.text_field :name %></p>
+	<p><%= label_tag 'name' %><br />
+	<%= f.text_field :name, {:class => "text"} %></p>
 
-	<p><%= label_tag 'login' %><br/>
-	<%= f.text_field :login %></p>
+	<p><%= label_tag 'login' %><br />
+	<%= f.text_field :login, {:class => "text"} %></p>
 
-	<p><%= label_tag 'email' %><br/>
-	<%= f.text_field :email %></p>
+	<p><%= label_tag 'email' %><br />
+	<%= f.text_field :email, {:class => "text"} %></p>
 
-	<p><%= label_tag 'password' %><br/>
-	<%= f.password_field :password %></p>
+	<p><%= label_tag 'password' %><br />
+	<%= f.password_field :password, {:class => "text"} %></p>
 
-	<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
-	<%= f.password_field :password_confirmation %></p>
+	<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br />
+	<%= f.password_field :password_confirmation, {:class => "text"} %></p>
 
 	<p><%= submit_tag 'Sign up' %></p>
 </fieldset>
