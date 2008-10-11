@@ -5,7 +5,7 @@ body {
   color: #222222; }
 
 a {
-  color: #2baa05; }
+  color: #548500; }
 
 a:hover {
   text-decoration: none;
@@ -39,7 +39,7 @@ h2 {
   border: #2baa05 2px solid; }
 
 .error {
-  background: #ec3c3c;
+  background: #f05d5d;
   border: #961d1d 2px solid; }
 
 /* Forms */
@@ -89,3 +89,21 @@ input.text {
     #header #nav li.session {
       float: right;
       margin-right: 0; }
+
+/* Data Tables */
+table {
+  width: 80%;
+  margin: 10px auto; }
+  table th {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    border-right: solid 2px #fff;
+    background: #9adb6e; }
+  table td {
+    border: none;
+    text-align: center; }
+  table tr.odd {
+    background: #fff; }
+  table tr.even {
+    background: #D5F5C1; }

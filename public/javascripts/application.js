@@ -7,7 +7,8 @@ $(document).ready(function() {
 	$("#nav li a").hover(
 		function() {
 			if ($(this).hasClass("session")) {
-				$(this).animate({ backgroundColor: "#ec3c3c"}, 400);
+				// Make the Logout link red instead
+				$(this).animate({ backgroundColor: "#F05D5D"}, 400);
 			} else {
 				$(this).animate({ backgroundColor: "#9adb6e"}, 400);
 			}
@@ -21,5 +22,9 @@ $(document).ready(function() {
 	$("div.error, div.success")
 		.fadeTo(3000, 1)
 		.animate({ height: 0, opacity: 0 }, 1000);
+		
+	// Zebra stripey tables
+	$('tr:even').addClass('even');
+	$('tr:odd').addClass('odd');
 	
 });

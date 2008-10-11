@@ -2,9 +2,9 @@
 !txt_color = #222
 !link_color = #2BAA05
 !link_hover_color = #548500
-!light_green = #9adb6e
-!light_red = #ec3c3c
-!dark_red = #961d1d
+!light_green = #9ADB6E
+!light_red = #F05D5D
+!dark_red = #961D1D
 
 !serif = "Georgia, Times, serif"
 !sans = "Arial, Helvetica, sans-serif"
@@ -16,7 +16,7 @@ body
   :color= !bg_color
   
 a
-  :color= !link_color
+  :color= !link_hover_color
 a:hover
   :text-decoration none
   :color= !link_hover_color
@@ -94,3 +94,21 @@ input.text
     li.session
       :float right
       :margin-right 0
+
+/* Data Tables
+table
+  :width 80%
+  :margin 10px auto
+  th
+    :font-size 14px
+    :font-weight bold
+    :color #222
+    :border-right solid 2px #fff
+    :background= !light_green
+  td
+    :border none
+    :text-align center
+  tr.odd
+    :background #fff
+  tr.even
+    :background #D5F5C1
