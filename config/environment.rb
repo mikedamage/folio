@@ -10,6 +10,11 @@ RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+module Dates
+	SHORT_DATE = "%m-%d-%Y"
+	DATE_TIME = "#{SHORT_DATE} %H:%M"
+end
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

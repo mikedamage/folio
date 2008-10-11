@@ -1,13 +1,15 @@
 class CategoriesController < ApplicationController
 	
-	layout "main"
-	before_filter :login_required, :except => [:index, :projects, :images]
+	layout "main", :only => [:index, :show, :images]
+	layout "admin", :only => [:new, :edit]
+	
+	before_filter :login_required, :except => [:index, :show, :images]
 	
   def index
 		@categories = Category.find(:all)
   end
 
-  def projects
+  def show
 		@category = Category.find(params[:id])
 		@projects = Project.find(:all, :conditions => { :category_id => @category.id })
   end

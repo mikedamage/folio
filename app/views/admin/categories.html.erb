@@ -1,2 +1,25 @@
-<h1>Admin#categories</h1>
-<p>Find me in app/views/admin/categories.html.erb</p>
+<h2>Categories</h2>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Custom Fields</th>
+		<th>Projects</th>
+		<th>Last Updated</th>
+	</tr>
+	
+	<% @categories.each do |cat| %>
+	<tr>
+		<td><%= cat.name %></td>
+		<td>
+			<ul>
+				<% cat.custom_fields.each do |field| %>
+				<li><%= field[:name] %> <em>(<%= field[:type] %>)</em></li>
+				<% end %>
+			</ul>
+		</td>
+		<td><%= @projects_by_category[cat.id].nitems %></td>
+		<td><%= cat.updated_at.strftime(Dates::SHORT_DATE)%>
+	</tr>
+	<% end %>
+</table>

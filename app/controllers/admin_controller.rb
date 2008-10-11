@@ -26,6 +26,12 @@ class AdminController < ApplicationController
 	
   def categories
 		@categories = Category.find(:all)
+		@projects = Project.find(:all)
+		@projects_by_category = {}
+		
+		@categories.each do |cat|
+			@projects_by_category[cat.id] = Project.find(:all, :conditions => {:category_id => cat.id})
+		end
   end
 
 	def image
