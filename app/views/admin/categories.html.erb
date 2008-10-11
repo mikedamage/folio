@@ -10,13 +10,17 @@
 	
 	<% @categories.each do |cat| %>
 	<tr>
-		<td><%= cat.name %></td>
+		<td><%= link_to cat.name, { :controller => 'admin', :action => 'category', :id => cat.id } %></td>
 		<td>
+			<% if cat.custom_fields %>
 			<ul>
 				<% cat.custom_fields.each do |field| %>
 				<li><%= field[:name] %> <em>(<%= field[:type] %>)</em></li>
 				<% end %>
 			</ul>
+			<% else %>
+			<em>None</em>
+			<% end %>
 		</td>
 		<td><%= @projects_by_category[cat.id].nitems %></td>
 		<td><%= cat.updated_at.strftime(Dates::SHORT_DATE)%>

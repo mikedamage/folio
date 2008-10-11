@@ -13,18 +13,22 @@ class AdminController < ApplicationController
 
 	def project
 		@project = Project.find(params[:id])
+		@title = 'Projects <span class="divider">//</span> ' + @project.name
 	end
 
   def projects
+		@title = "Projects"
 		@projects = Project.find(:all)
   end
 
 	def category
 		@category = Category.find(params[:id])
+		@title = 'Categories <span class="divider">//</span> ' + @category.name
 		@projects = Project.find(:all, :conditions => { :category_id => @category.id })
 	end
 	
   def categories
+		@title = "Categories"
 		@categories = Category.find(:all)
 		@projects = Project.find(:all)
 		@projects_by_category = {}

@@ -5,10 +5,11 @@ body {
   color: #222222; }
 
 a {
-  color: #6caa00; }
+  color: #2baa05; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #548500; }
 
 div.container_12 {
   background: #fff; }
@@ -35,7 +36,7 @@ h2 {
 
 .success {
   background: #9adb6e;
-  border: #6caa00 2px solid; }
+  border: #2baa05 2px solid; }
 
 .error {
   background: #ec3c3c;
@@ -85,6 +86,6 @@ input.text {
         background: #9adb6e; }
       #header #nav li a:hover {
         background: #9adb6e; }
-    #header #nav li#session {
+    #header #nav li.session {
       float: right;
       margin-right: 0; }

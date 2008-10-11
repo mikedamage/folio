@@ -6,7 +6,11 @@ $(document).ready(function() {
 	// Pretty nav menu color fading
 	$("#nav li a").hover(
 		function() {
-			$(this).animate({ backgroundColor: "#9adb6e"}, 400);
+			if ($(this).hasClass("session")) {
+				$(this).animate({ backgroundColor: "#ec3c3c"}, 400);
+			} else {
+				$(this).animate({ backgroundColor: "#9adb6e"}, 400);
+			}
 		},
 		function() {
 			$(this).animate({ backgroundColor: "#cccccc"}, 400);

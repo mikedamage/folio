@@ -1,6 +1,7 @@
 !bg_color = #222
 !txt_color = #222
-!link_color = #6CAA00
+!link_color = #2BAA05
+!link_hover_color = #548500
 !light_green = #9adb6e
 !light_red = #ec3c3c
 !dark_red = #961d1d
@@ -18,6 +19,7 @@ a
   :color= !link_color
 a:hover
   :text-decoration none
+  :color= !link_hover_color
   
 div.container_12
   :background #fff
@@ -89,6 +91,6 @@ input.text
         :background= !light_green
       a:hover
         :background= !light_green
-    li#session
+    li.session
       :float right
       :margin-right 0

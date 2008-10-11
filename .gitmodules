@@ -16,3 +16,6 @@
 [submodule "vendor/plugins/rails_settings"]
 	path = vendor/plugins/rails_settings
 	url = git://github.com/Squeegy/rails-settings.git
+[submodule "vendor/plugins/liquid"]
+	path = vendor/plugins/liquid
+	url = git://github.com/tobi/liquid.git
