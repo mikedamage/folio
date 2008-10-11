@@ -1,0 +1,65 @@
+
+--- 
+categories: 
+  columns: 
+  - id
+  - name
+  - custom_fields
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - Web Sites
+    - 
+    - 2008-10-10 14:55:32
+    - 2008-10-10 14:55:32
+  - - "2"
+    - Email Marketing
+    - 
+    - 2008-10-10 15:07:07
+    - 2008-10-10 15:07:07
+  - - "3"
+    - Print Collateral
+    - 
+    - 2008-10-10 15:09:07
+    - 2008-10-10 15:09:07
+  - - "4"
+    - Advertising
+    - 
+    - 2008-10-10 15:09:45
+    - 2008-10-10 15:09:45
+  - - "5"
+    - Brand Development
+    - 
+    - 2008-10-10 15:10:30
+    - 2008-10-10 15:10:30
+  - - "6"
+    - Interactive and Multimedia
+    - 
+    - 2008-10-10 15:11:19
+    - 2008-10-10 15:11:19
+
+--- 
+users: 
+  columns: 
+  - id
+  - login
+  - name
+  - email
+  - crypted_password
+  - salt
+  - created_at
+  - updated_at
+  - remember_token
+  - remember_token_expires_at
+  records: 
+  - - "1"
+    - mike
+    - Mike Green
+    - mike@fifthroomcreative.com
+    - 560330bf53cf5de7f7989a6fc1bdea755b64a368
+    - fd4d8b8c943b078d657b343cb5b69b930b89ae90
+    - 2008-10-09 20:27:48
+    - 2008-10-09 20:27:48
+    - 
+    - 
