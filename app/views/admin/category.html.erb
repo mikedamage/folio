@@ -1,0 +1,63 @@
+<div class="show">
+	<div class="grid_9 alpha">
+		<h2><%= @category.name %></h2>
+
+		<div class="stats">
+			<strong>Created:</strong> <%= @category.created_at.strftime(Dates::DATE_TIME) %><br/>
+			<strong>Updated:</strong> <%= @category.updated_at.strftime(Dates::DATE_TIME) %>
+		</div>
+
+		<h3>Description</h3>
+		<p>
+			<%= @category.description if @category.description %>
+		</p>
+	</div>
+
+	<div class="grid_3 omega" id="sidebar">
+		<h3>Projects</h3>
+	
+		<% if @projects %>
+		<ul>
+			<% @projects.each do |project| %>
+			<li><%= link_to project.name, {:controller => 'admin', :action => 'project', :id => project.id}%></li>
+			<% end %>
+		</ul>
+		<% else %>
+		<em>None</em>
+		<% end %>
+	</div>
+</div>
+<div class="edit">
+	<h2>Edit <%= @category.name %></h2>
+	<% form_for :category, :url => {:controller => 'categories', :action => 'update'} do |f| -%>
+		<p>
+			<%= f.error_messages %>
+		</p>
+		
+		<p>
+			<%= label :category, :name %>
+			<%= f.text_field :name %>
+		</p>
+		
+		<div class="custom_fields">
+			<h3>Custom Fields</h3>
+			<!-- add a link to add more custom fields via some jQuery voodoo -->
+			<% if @category.custom_fields -%>
+				<p>
+					<% @category.custom_fields.each do |field| -%>
+						<!-- Generate an input field for each custom field in the collection so that they'll be a single array of hashes when submitted -->
+					<% end -%>
+				</p>
+			<% else -%>
+				<p>
+					<>
+				</p>
+			<% end -%>
+		</div>
+		
+		<p>
+			<%= label :category, :description %>
+			<%= text_area :category, :description %>
+		</p>
+	<% end -%>
+</div>

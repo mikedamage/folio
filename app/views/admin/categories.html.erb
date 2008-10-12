@@ -23,7 +23,7 @@
 			<% end %>
 		</td>
 		<td><%= @projects_by_category[cat.id].nitems %></td>
-		<td><%= cat.updated_at.strftime(Dates::SHORT_DATE)%>
+		<td><%= cat.updated_at.strftime(Dates::DATE_TIME)%>
 	</tr>
 	<% end %>
 </table>

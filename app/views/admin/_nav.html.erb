@@ -6,6 +6,7 @@
 			end
 		%>
 	</li>
+	
 	<li>
 		<%= 
 			link_to_unless_current("Categories", {:controller => 'admin', :action => 'categories'}) do
@@ -13,6 +14,23 @@
 			end	
 		%>
 	</li>
+	
+	<li>
+		<%=
+			link_to_unless_current("Projects", {:controller => 'admin', :action => 'projects'}) do
+				active_nav_item("Projects")
+			end
+		%>
+	</li>
+	
+	<li>
+		<%=
+			link_to_unless_current("Settings", {:controller => 'admin', :action => 'settings'}) do
+				active_nav_item("Settings")
+			end
+		%>
+	</li>
+	
 	<% if logged_in? %>
 		<li class="session">
 			<%= link_to "Logout", { :controller => 'sessions', :action => 'destroy' }, { :class => 'session' } %>
