@@ -20,8 +20,9 @@ $(document).ready(function() {
 	
 	// Let success and error notices hang around for 3 seconds before fading out
 	$("div.error, div.success")
-		.fadeTo(3000, 1)
-		.animate({ height: 0, opacity: 0 }, 1000);
+		.fadeTo(1000, 1)
+		.animate({ height: 0, opacity: 0 }, 1000)
+		.hide();
 		
 	// Zebra stripey tables
 	$('tr:even').addClass('even');
