@@ -18,19 +18,41 @@ $(document).ready(function() {
 		}
 	);
 	
-	// Let success and error notices hang around for 3 seconds before fading out
+	// Let success and error notices hang around for 2 seconds before fading out
 	$("div.error, div.success")
-		.fadeTo(1000, 1)
-		.animate({ height: 0, opacity: 0 }, 1000)
-		.hide();
+		.fadeTo(2000, 1)
+		.hide(2000);
 		
 	// Zebra stripey tables
 	$('tr:even').addClass('even');
 	$('tr:odd').addClass('odd');
 	
 	// Form Stuff
-	$('.edit').click(function() {
-		
+	$('.edit').hide();
+	$('#edit_link').click(function() {
+		$('.show').hide("fast");
+		$('.edit').show("fast");
 	});
+	$('#show_link').click(function() {
+		$('.show').show('fast');
+		$('.edit').hide('fast');
+	});
+	
+	// Add custom fields to category
+	var custom_field = '<p><label>Custom Field</label><br/><input type="text" name="category[custom_fields][]" class="custom_field" /> <a href="#" onclick="$(this).parent().remove(); return false;" class="remove"><img src="/images/icons/subtract.gif" width="16" height="16" alt="remove field"/></a></p>';
+	
+	$('#add_custom_field').click(function() {
+		$(custom_field).appendTo(".custom_fields");
+		return false;
+	})
+	.hover(
+		function() { $("#add_custom_field img").css("background-color", "#2baa05"); },
+		function() { $("#add_custom_field img").css("background-color", "#9adb6e"); }
+	);
+	
+	$('.remove').hover(
+		function() { $(".remove img").css("background-color", "#E22929"); },
+		function() { $(".remove img").css("background-color", "#F05D5D") }
+	);
 	
 });

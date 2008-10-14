@@ -45,5 +45,9 @@ class AdminController < ApplicationController
 	def images
 		@images = Image.find(:all)
 	end
+	
+	def settings
+		@settings = Settings.find(:all)
+	end
 
 end

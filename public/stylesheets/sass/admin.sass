@@ -92,7 +92,7 @@ input.text
         :background #ccc
         :text-decoration none
       div.active_item
-        :font-weight bold
+        :text-decoration underline
         :background= !light_green
       a:hover
         :background= !light_green
@@ -110,18 +110,37 @@ table
     :color #fff
     :border-right solid 2px #fff
     :background= !light_green
+    :padding-top 2px
+    :padding-bottom 2px
   td
     :border none
     :text-align center
+    :padding-top 2px
+    :padding-bottom 2px
   tr.odd
     :background #fff
   tr.even
     :background #D5F5C1
     
 /* Show/Edit Pages
+#sidebar
+  :background #EBFFBF
+  :padding 10px 0
+  *
+    :margin-left 15px
 .editable
   :margin-bottom 10px
   h2
     :margin-bottom 0
 .stats
   :margin-bottom 20px
+a#add_custom_field
+  :text-decoration none
+  img
+    :background= !light_green "url(../images/icons/bg_rounded.gif) no-repeat"
+    :vertical-align middle
+a.remove
+  :margin-top 5px
+  img
+    :background= !light_red "url(../images/icons/bg_rounded.gif) no-repeat"
+    :vertical-align middle

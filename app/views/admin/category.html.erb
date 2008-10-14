@@ -6,6 +6,18 @@
 			<strong>Created:</strong> <%= @category.created_at.strftime(Dates::DATE_TIME) %><br/>
 			<strong>Updated:</strong> <%= @category.updated_at.strftime(Dates::DATE_TIME) %>
 		</div>
+		
+		<h3>Custom Fields</h3>
+		<p><em>These fields will be available to new projects that belong to this category.</em></p>
+		<ul class="custom_fields">
+		<% if @category.custom_fields %>
+			<% @category.custom_fields.each do |field| %>
+			<li><%= field %></li>
+			<% end %>
+		<% else %>
+			<li><em>None</em></li>
+		<% end %>
+		</ul>
 
 		<h3>Description</h3>
 		<p>
@@ -14,8 +26,14 @@
 	</div>
 
 	<div class="grid_3 omega" id="sidebar">
+		<h3>Options</h3>
+		<ul class="subnav">
+			<li><a href="#" id="edit_link">Edit</a></li>
+			<li><%= link_to "Add a Project", {:controller => 'projects', :action => 'new'} %></li>
+		</ul>
+		
 		<h3>Projects</h3>
-	
+
 		<% if @projects %>
 		<ul>
 			<% @projects.each do |project| %>
@@ -27,37 +45,67 @@
 		<% end %>
 	</div>
 </div>
+
 <div class="edit">
-	<h2>Edit <%= @category.name %></h2>
-	<% form_for :category, :url => {:controller => 'categories', :action => 'update'} do |f| -%>
-		<p>
-			<%= f.error_messages %>
-		</p>
-		
-		<p>
-			<%= label :category, :name %>
-			<%= f.text_field :name %>
-		</p>
-		
-		<div class="custom_fields">
-			<h3>Custom Fields</h3>
-			<!-- add a link to add more custom fields via some jQuery voodoo -->
-			<% if @category.custom_fields -%>
+	<div class="grid_9 alpha">
+		<h2>Edit <%= @category.name %></h2>
+		<% form_for :category, :url => {:controller => 'categories', :action => 'update'} do |f| -%>
+			<p>
+				<%= f.error_messages %>
+			</p>
+	
+			<p>
+				<%= label :category, :name %><br/>
+				<%= f.text_field :name %>
+			</p>
+	
+			<div class="custom_fields">
+				<h3>Custom Fields</h3>
+				<!-- add a link to add more custom fields via some jQuery voodoo -->
 				<p>
-					<% @category.custom_fields.each do |field| -%>
-						<!-- Generate an input field for each custom field in the collection so that they'll be a single array of hashes when submitted -->
-					<% end -%>
+					<em>These fields will be available to new projects that belong to this category.</em>
 				</p>
-			<% else -%>
-				<p>
-					<>
-				</p>
-			<% end -%>
-		</div>
+				<a href="#" id="add_custom_field"><img src="/images/icons/add.gif" alt="add custom field" width="16" height="16"/> Add a Custom Field</a>
+				<% if @category.custom_fields -%>
+					<p>
+						<% @category.custom_fields.each do |field| -%>
+							<!-- Generate an input field for each custom field in the collection so that they'll be a single array of hashes when submitted -->
+							<label>Field Name</label><br/>
+							<input type="text" name="category[custom_fields][]" class="category_custom_field" value="<%= field %>"/>
+						<% end -%>
+					</p>
+				<% else -%>
+					<p>
+			
+					</p>
+				<% end -%>
+			</div>
+	
+			<p>
+				<%= label :category, :description %><br/>
+				<%= text_area :category, :description, {:rows => 5, :cols => 50} %>
+			</p>
+		<% end -%>
+	</div>
+	
+	<div class="grid_3 omega" id="sidebar">
+		<h3>Options</h3>
+		<ul class="subnav">
+			<li><a href="#" id="show_link">Show (cancel changes)</a></li>
+			<li><%= link_to "Add a Project", {:controller => 'projects', :action => 'new'} %></li>
+		</ul>
 		
-		<p>
-			<%= label :category, :description %>
-			<%= text_area :category, :description %>
-		</p>
-	<% end -%>
+		<h3>Projects</h3>
+
+		<% if @projects %>
+		<ul>
+			<% @projects.each do |project| %>
+			<li><%= link_to project.name, {:controller => 'admin', :action => 'project', :id => project.id}%></li>
+			<% end %>
+		</ul>
+		<% else %>
+		<em>None</em>
+		<% end %>
+	</div>
 </div>
+

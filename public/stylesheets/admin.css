@@ -87,7 +87,7 @@ input.text {
         background: #ccc;
         text-decoration: none; }
       #header #nav li div.active_item {
-        font-weight: bold;
+        text-decoration: underline;
         background: #9adb6e; }
       #header #nav li a:hover {
         background: #9adb6e; }
@@ -104,16 +104,26 @@ table {
     font-weight: bold;
     color: #fff;
     border-right: solid 2px #fff;
-    background: #9adb6e; }
+    background: #9adb6e;
+    padding-top: 2px;
+    padding-bottom: 2px; }
   table td {
     border: none;
-    text-align: center; }
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px; }
   table tr.odd {
     background: #fff; }
   table tr.even {
     background: #D5F5C1; }
 
 /* Show/Edit Pages */
+#sidebar {
+  background: #EBFFBF;
+  padding: 10px 0; }
+  #sidebar * {
+    margin-left: 15px; }
+
 .editable {
   margin-bottom: 10px; }
   .editable h2 {
@@ -121,3 +131,15 @@ table {
 
 .stats {
   margin-bottom: 20px; }
+
+a#add_custom_field {
+  text-decoration: none; }
+  a#add_custom_field img {
+    background: #9adb6e url(../images/icons/bg_rounded.gif) no-repeat;
+    vertical-align: middle; }
+
+a.remove {
+  margin-top: 5px; }
+  a.remove img {
+    background: #f05d5d url(../images/icons/bg_rounded.gif) no-repeat;
+    vertical-align: middle; }
