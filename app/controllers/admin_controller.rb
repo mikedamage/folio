@@ -25,6 +25,10 @@ class AdminController < ApplicationController
 		@category = Category.find(params[:id])
 		@title = 'Categories <span class="divider">//</span> ' + @category.name
 		@projects = Project.find(:all, :conditions => { :category_id => @category.id })
+		if @category.custom_fields
+			@custom_fields = @category.custom_fields.to_a
+			@custom_fields.delete_at(0)
+		end
 	end
 	
   def categories

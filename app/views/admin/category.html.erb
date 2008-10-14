@@ -10,8 +10,8 @@
 		<h3>Custom Fields</h3>
 		<p><em>These fields will be available to new projects that belong to this category.</em></p>
 		<ul class="custom_fields">
-		<% if @category.custom_fields %>
-			<% @category.custom_fields.each do |field| %>
+		<% if @custom_fields %>
+			<% @custom_fields.each do |field| %>
 			<li><%= field %></li>
 			<% end %>
 		<% else %>
@@ -49,7 +49,7 @@
 <div class="edit">
 	<div class="grid_9 alpha">
 		<h2>Edit <%= @category.name %></h2>
-		<% form_for :category, :url => {:controller => 'categories', :action => 'update'} do |f| -%>
+		<% form_for :category, :url => {:controller => 'categories', :action => 'update', :id => @category.id} do |f| -%>
 			<p>
 				<%= f.error_messages %>
 			</p>
@@ -66,17 +66,16 @@
 					<em>These fields will be available to new projects that belong to this category.</em>
 				</p>
 				<a href="#" id="add_custom_field"><img src="/images/icons/add.gif" alt="add custom field" width="16" height="16"/> Add a Custom Field</a>
-				<% if @category.custom_fields -%>
+				<% if @custom_fields -%>
 					<p>
-						<% @category.custom_fields.each do |field| -%>
+						<% @custom_fields.each do |field| -%>
 							<!-- Generate an input field for each custom field in the collection so that they'll be a single array of hashes when submitted -->
-							<label>Field Name</label><br/>
-							<input type="text" name="category[custom_fields][]" class="category_custom_field" value="<%= field %>"/>
+							<p>
+								<label>Custom Field</label><br/>
+								<input type="text" name="category[custom_fields][]" class="category_custom_field" value="<%= field %>"/>
+								<a href="#" onclick="$(this).parent().remove(); return false;" class="remove"><img src="/images/icons/subtract.gif" width="16" height="16" alt="remove field"/></a>
+							</p>
 						<% end -%>
-					</p>
-				<% else -%>
-					<p>
-			
 					</p>
 				<% end -%>
 			</div>
@@ -85,6 +84,7 @@
 				<%= label :category, :description %><br/>
 				<%= text_area :category, :description, {:rows => 5, :cols => 50} %>
 			</p>
+			<%= submit_tag "Update" %>
 		<% end -%>
 	</div>
 	

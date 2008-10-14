@@ -15,7 +15,7 @@
 			<% if cat.custom_fields %>
 			<ul>
 				<% cat.custom_fields.each do |field| %>
-				<li><%= field[:name] %> <em>(<%= field[:type] %>)</em></li>
+				<%= field %><br/>
 				<% end %>
 			</ul>
 			<% else %>

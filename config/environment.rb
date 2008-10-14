@@ -33,6 +33,7 @@ Rails::Initializer.run do |config|
 
 	# FiveRuns TuneUp App Profiler
 	# config.gem 'fiveruns_tuneup'
+	config.gem 'RedCloth'
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
